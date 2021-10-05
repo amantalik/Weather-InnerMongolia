@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night on the Inner Mongolian Steppe</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet"/>
 </head>
 
 <body>
-    <h1 class= "project-heading">Good Night from the Inner Mongolian Steppe! </h1>
-    <div class = "buttons">
+    <h1 class= "project-heading">Night on the Inner Mongolian Steppe </h1>
+    <!-- <div class = "buttons">
         <button class = "prev_button" id = "prevButton">Previous</button>
         <button class = "next_button" id = "nextButton">Next</button>
-    </div>
+    </div> -->
     <section class = "section_container">
         <div class= "weather_info">
             <h2 class="current_temperature" id = "temp" class= "description"></h2>
@@ -27,14 +29,24 @@
             
             
         </div>
+
+        
+
         <div class = "project-image">
-            <img class="moon-image" src="moon.jpeg">
+            <img class="moon-image" id="p-img">
         </div>
+
+        <!-- <audio controls>
+            <source id="foobar" src="windSound.mp3" type="audio/mp3" preload="auto">
+    
+        </audio> -->
+        <audio id="foobar" src="windSound.mp3" preload="auto"> 
         
     </section>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
     <script type="text/javascript" src='app.js'></script>
+    <script type="text/javascript" src='star.js'></script>
 </body>
 </html>
