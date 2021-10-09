@@ -1,4 +1,8 @@
 // https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+//Ref: Daniel Shiffman Coding Train tutorials on creating a starfield n resizing p5 sketch as a background.
+// https://www.youtube.com/watch?v=17WoOqgXsRM&list=PLdIowMufw5k9IawKExlslW80jwVYb5bER
+// https://www.youtube.com/watch?v=OIfEHD3KqCg
+
 
 const API_URL = 'https://api.openweathermap.org/data/2.5/onecall?lat=42&lon=110&units=metric';
 
