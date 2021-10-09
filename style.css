@@ -3,13 +3,17 @@ body{
     max-width: 100%;
     overflow-x: hidden;
     font-family: 'EB Garamond', serif;
+    background-color: black;
 }
 
 .buttons{
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 580px;
+    left: 487px;
 }
 .weather_info{
     display: flex;
@@ -19,7 +23,7 @@ body{
     position: absolute;
     color: aliceblue;
     top: 272px;
-    left: 398px;
+    left: 292px;
 }
 h1{
     color: white;
@@ -60,8 +64,9 @@ p{
 
 img{
     width: 26%;
-    top: 242px;
-    left: 192px;
+    top: 238px;
+    left: 235px;
+    display: flex;
     position: relative;
     
 }
@@ -72,5 +77,6 @@ canvas{
     height:100%;
     margin: -9px 0px 0px -8px;
 }
+
 
 

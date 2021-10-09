@@ -18,7 +18,9 @@ window.addEventListener('load', function(){
         .then(response => response.json())
         .then(data =>{
     weatherData = data;
-    console.log(weatherData);
+    // console.log(weatherData);
+
+    //load in each weather info
 
     let temperature = document.getElementById('temp');
     temperature.innerHTML = weatherData.current.temp + ' °C';
@@ -29,28 +31,18 @@ window.addEventListener('load', function(){
     let windSpeed = document.getElementById('wind_speed');
     windSpeed.innerHTML = 'Wind Speed: ' + weatherData.current.wind_speed + ' meters/sec';
 
+    //turn timestamp into human readable time
+    timestampRise = (weatherData.current.sunrise *1000);
+    var timeRise = new Date(timestampRise).toTimeString();
+    // console.log(timeRise);
     let sunRise = document.getElementById('sunRise');
-    sunRise.innerHTML = 'Sunrise at ' + weatherData.current.sunrise;
+    sunRise.innerHTML = 'Sunrise at ' + timeRise;
 
-    UNIX_timestamp = weatherData.current.sunrise;
-    
-    function timeConverter(UNIX_timestamp){
-        var a = new Date(UNIX_timestamp * 1000);
-        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        var year = a.getFullYear();
-        var month = months[a.getMonth()];
-        var date = a.getDate();
-        var hour = a.getHours();
-        var min = a.getMinutes();
-        var sec = a.getSeconds();
-        var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-        return time;
-      }
-      console.log(timeConverter(0));
-    
-
+    //turn timestamp into human readable time
+    timestampSet = (weatherData.current.sunset *1000);
+    var timeSet = new Date(timestampSet).toTimeString();
     let sunSet = document.getElementById('sunSet');
-    sunSet.innerHTML = 'Sunset at ' + weatherData.current.sunset;
+    sunSet.innerHTML = 'Sunset at ' + timeSet;
 
     let humidity = document.getElementById('hum');
     humidity.innerHTML = 'Humidity: ' + weatherData.current.humidity + '%';
@@ -59,10 +51,18 @@ window.addEventListener('load', function(){
     let moonPhase;
     moonPhaseNum = weatherData.daily[0].moon_phase;
 
+    //load in image
     let imageElement = document.getElementById('p-img');
 
-    // var windSound = new Audio("windSound.mp3");
-    // windSound.play();
+    //audio plays when button is pressed
+    let button = document.getElementById('audioButton');
+    button.addEventListener('click', function(){
+        // console.log("clicked");
+        var windSound = new Audio("windSound.mp3");
+        windSound.play();
+    })
+
+    // 
     // var windSound = document.getElementById("foobar");
     // windSound.play();  
     
@@ -125,15 +125,18 @@ let windSound;
     
 // }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+      }
 
 function setup(){
-    console.log('setUp!!')
+    // console.log('setUp!!')
     createCanvas(windowWidth, windowHeight);
+    // canvas.position(0,0);
+    // canvas.style('z-index','-1');
     for (var i = 0; i < 800; i++) {
         stars[i] = new Star();
       }
-    //   windSound.play();
-    //   createSlider(10,100,47);
 
 }
 function draw(){
@@ -153,9 +156,7 @@ function draw(){
     }else{
         console.log('Not Ready Yet!')
     }
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-      }
+
 
     
 }
