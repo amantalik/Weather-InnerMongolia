@@ -61,8 +61,8 @@ window.addEventListener('load', function(){
 
     let imageElement = document.getElementById('p-img');
 
-    var windSound = new Audio("windSound.mp3");
-    windSound.play();
+    // var windSound = new Audio("windSound.mp3");
+    // windSound.play();
     // var windSound = document.getElementById("foobar");
     // windSound.play();  
     
@@ -128,7 +128,7 @@ let windSound;
 
 function setup(){
     console.log('setUp!!')
-    createCanvas(1500,800);
+    createCanvas(windowWidth, windowHeight);
     for (var i = 0; i < 800; i++) {
         stars[i] = new Star();
       }
@@ -153,6 +153,9 @@ function draw(){
     }else{
         console.log('Not Ready Yet!')
     }
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+      }
 
     
 }
