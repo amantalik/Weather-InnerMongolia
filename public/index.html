@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Night on the Inner Mongolian Steppe</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div id="container"></div>
+    <h1 class= "project-heading">Night on the Inner Mongolian Steppe </h1>
+    <div class = "buttons">
+
+        <div class = "audio_button">
+            <button class = "audio_button" id = "audioButton">Listen</button>
+        </div>
+
+        <div  class = "other_buttons">
+            <button class = "other_buttons" id= "record-button">Log my Travel</button>
+        </div>
+
+        <div  class = "travel_input">
+        <input class = "travel_input" id='travel-note' type="text" placeholder="hello stargazers">    
+        </div>
+
+        <div class="total-tracker">
+            <button id="get-tracker"> Who was here before?</button>
+            <div id="travel-info"></div>
+        </div>
+
+    </div>
+    
+    <section class = "section_container">
+        <div class= "weather_info">
+            <h2 class="current_temperature" id = "temp" class= "description"></h2>
+            <h3 class="current_weather" id="weather" class= "description"></h3>
+            <p class="wind" id = "wind_speed" class= "description"></p>
+            <p class="sun_rise" id = "sunRise" class= "description"></p>
+            
+            <p class="sun_set" id = "sunSet" class= "description"></p>
+            <p class="humidity" id = "hum" class= "description"></p>
+            <p class="moonstate" id = "moon_state" class= "description"></p>
+            
+        </div>
+
+        
+
+        <div class = "project-image">
+            <img class="moon-image" id="p-img">
+        </div>
+
+        <!-- <audio controls>
+            <source id="foobar" src="windSound.mp3" type="audio/mp3" preload="auto">
+    
+        </audio> -->
+        <audio id="foobar" src="windSound.mp3" preload="auto"> 
+        
+    </section>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
+    <script type="text/javascript" src='script.js'></script>
+    <script type="text/javascript" src='script.js'></script>
+    <script type="text/javascript" src='star.js'></script>
+</body>
+</html>

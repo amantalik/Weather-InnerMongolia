@@ -1,0 +1,25 @@
+{
+  "name": "weather_visualization2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amantalik/Weather-InnerMongolia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amantalik/Weather-InnerMongolia/issues"
+  },
+  "homepage": "https://github.com/amantalik/Weather-InnerMongolia#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}
